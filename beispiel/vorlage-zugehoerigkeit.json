@@ -1,0 +1,766 @@
+{
+  "version": "1.0.0",
+  "meta": {
+    "title": "Zugehörigkeit im ersten Semester",
+    "author": "Projektgruppe",
+    "course": "Design Thinking",
+    "audience": "Studierende im ersten Semester",
+    "rq": "Wie könnten wir neuen Studierenden helfen, im ersten Semester echte Beziehungen zu Kommiliton:innen aufzubauen, damit sie sich zugehörig fühlen und ihr Studium fortsetzen?"
+  },
+  "questions": [
+    {
+      "id": "3gm2mw9",
+      "var": "consent",
+      "type": "consent",
+      "text": "Einverständnis",
+      "help": "",
+      "required": true,
+      "options": [
+        "Ich bin einverstanden, dass meine Antworten anonym für dieses Hochschulprojekt ausgewertet werden."
+      ],
+      "ordered": false,
+      "min": 1,
+      "max": 10,
+      "minLabel": "",
+      "maxLabel": "",
+      "rows": [],
+      "cols": [],
+      "roles": {
+        "target": false,
+        "group": false,
+        "cluster": false
+      }
+    },
+    {
+      "id": "x7l463u",
+      "var": "sem",
+      "type": "single",
+      "text": "Im wievielten Semester bist du?",
+      "help": "",
+      "required": false,
+      "options": [
+        "1.",
+        "2.",
+        "3.",
+        "4. oder höher"
+      ],
+      "ordered": true,
+      "min": 1,
+      "max": 10,
+      "minLabel": "",
+      "maxLabel": "",
+      "rows": [],
+      "cols": [],
+      "roles": {
+        "group": false,
+        "cluster": false,
+        "target": false
+      }
+    },
+    {
+      "id": "9fu93in",
+      "var": "course",
+      "type": "short",
+      "text": "Was studierst du?",
+      "help": "",
+      "required": false,
+      "options": [],
+      "ordered": false,
+      "min": 1,
+      "max": 10,
+      "minLabel": "",
+      "maxLabel": "",
+      "rows": [],
+      "cols": [],
+      "roles": {
+        "target": false,
+        "group": false,
+        "cluster": false
+      }
+    },
+    {
+      "id": "oyy7n83",
+      "var": "living",
+      "type": "single",
+      "text": "Wie wohnst du gerade?",
+      "help": "",
+      "required": false,
+      "options": [
+        "allein",
+        "in einer WG",
+        "bei meinen Eltern",
+        "mit Partner:in",
+        "im Wohnheim"
+      ],
+      "ordered": false,
+      "min": 1,
+      "max": 10,
+      "minLabel": "",
+      "maxLabel": "",
+      "rows": [],
+      "cols": [],
+      "roles": {
+        "group": true,
+        "cluster": false,
+        "target": false
+      }
+    },
+    {
+      "id": "2slam38",
+      "var": "commute",
+      "type": "single",
+      "text": "Wie lange brauchst du zur Uni (einfacher Weg)?",
+      "help": "",
+      "required": false,
+      "options": [
+        "unter 15 Min.",
+        "15–30 Min.",
+        "30–60 Min.",
+        "über 1 Stunde"
+      ],
+      "ordered": true,
+      "min": 1,
+      "max": 10,
+      "minLabel": "",
+      "maxLabel": "",
+      "rows": [],
+      "cols": [],
+      "roles": {
+        "group": false,
+        "cluster": true,
+        "target": false
+      }
+    },
+    {
+      "id": "gsk6gwx",
+      "var": "job",
+      "type": "single",
+      "text": "Hast du einen Nebenjob?",
+      "help": "",
+      "required": false,
+      "options": [
+        "nein",
+        "bis 10 Std. pro Woche",
+        "10–20 Std. pro Woche",
+        "mehr als 20 Std. pro Woche"
+      ],
+      "ordered": true,
+      "min": 1,
+      "max": 10,
+      "minLabel": "",
+      "maxLabel": "",
+      "rows": [],
+      "cols": [],
+      "roles": {
+        "group": false,
+        "cluster": true,
+        "target": false
+      }
+    },
+    {
+      "id": "gexz7mn",
+      "var": "newcity",
+      "type": "single",
+      "text": "Bist du fürs Studium in eine neue Stadt gezogen?",
+      "help": "",
+      "required": false,
+      "options": [
+        "ja",
+        "nein"
+      ],
+      "ordered": false,
+      "min": 1,
+      "max": 10,
+      "minLabel": "",
+      "maxLabel": "",
+      "rows": [],
+      "cols": [],
+      "roles": {
+        "group": true,
+        "cluster": false,
+        "target": false
+      }
+    },
+    {
+      "id": "tx0yadu",
+      "var": "ice",
+      "type": "long",
+      "text": "Was war bisher dein schönster Moment im Studium?",
+      "help": "",
+      "required": false,
+      "options": [],
+      "ordered": false,
+      "min": 1,
+      "max": 10,
+      "minLabel": "",
+      "maxLabel": "",
+      "rows": [],
+      "cols": [],
+      "roles": {
+        "target": false,
+        "group": false,
+        "cluster": false
+      }
+    },
+    {
+      "id": "tkzw84o",
+      "var": "firstweek",
+      "type": "single",
+      "text": "Wie hast du deine erste Woche an der Uni erlebt?",
+      "help": "",
+      "required": false,
+      "options": [
+        "sehr schwierig",
+        "eher schwierig",
+        "gemischt",
+        "eher gut",
+        "richtig gut"
+      ],
+      "ordered": true,
+      "min": 1,
+      "max": 10,
+      "minLabel": "",
+      "maxLabel": "",
+      "rows": [],
+      "cols": [],
+      "roles": {
+        "group": false,
+        "cluster": true,
+        "target": false
+      }
+    },
+    {
+      "id": "79xy4q2",
+      "var": "firstweek_story",
+      "type": "long",
+      "text": "Welcher Moment aus deiner ersten Woche ist dir besonders hängen geblieben?",
+      "help": "",
+      "required": false,
+      "options": [],
+      "ordered": false,
+      "min": 1,
+      "max": 10,
+      "minLabel": "",
+      "maxLabel": "",
+      "rows": [],
+      "cols": [],
+      "roles": {
+        "target": false,
+        "group": false,
+        "cluster": false
+      }
+    },
+    {
+      "id": "odrgwsk",
+      "var": "belong",
+      "type": "scale",
+      "text": "Wie sehr fühlst du dich mittlerweile integriert und angekommen?",
+      "help": "",
+      "required": false,
+      "options": [],
+      "ordered": false,
+      "min": 1,
+      "max": 10,
+      "minLabel": "gar nicht",
+      "maxLabel": "voll und ganz",
+      "rows": [],
+      "cols": [],
+      "roles": {
+        "target": true,
+        "group": false,
+        "cluster": true
+      }
+    },
+    {
+      "id": "s2xarmt",
+      "var": "belong_why",
+      "type": "long",
+      "text": "Woran merkst du, wie angekommen du dich fühlst?",
+      "help": "",
+      "required": false,
+      "options": [],
+      "ordered": false,
+      "min": 1,
+      "max": 10,
+      "minLabel": "",
+      "maxLabel": "",
+      "rows": [],
+      "cols": [],
+      "roles": {
+        "target": false,
+        "group": false,
+        "cluster": false
+      }
+    },
+    {
+      "id": "w8wz20g",
+      "var": "helpers",
+      "type": "multi",
+      "text": "Was hat dir geholfen, Anschluss zu finden?",
+      "help": "",
+      "required": false,
+      "options": [
+        "Ersti-Woche / O-Woche",
+        "Ersti-Fahrt",
+        "Gruppenarbeit / Projekt",
+        "Lerngruppe",
+        "Tutorium",
+        "Sitznachbar:in in der Vorlesung",
+        "Gruppenchat",
+        "Partys",
+        "WG / Wohnheim",
+        "Hochschulsport / Verein",
+        "Hochschulgruppe / Fachschaft",
+        "Buddy / Mentor:in",
+        "Kannte schon Leute",
+        "Fahrgemeinschaft",
+        "Social Media",
+        "Bisher eher nichts"
+      ],
+      "ordered": false,
+      "min": 1,
+      "max": 10,
+      "minLabel": "",
+      "maxLabel": "",
+      "rows": [],
+      "cols": [],
+      "roles": {
+        "target": false,
+        "group": false,
+        "cluster": false
+      }
+    },
+    {
+      "id": "6zk9j54",
+      "var": "helpers_story",
+      "type": "long",
+      "text": "Wie genau ist daraus ein Kontakt entstanden?",
+      "help": "",
+      "required": false,
+      "options": [],
+      "ordered": false,
+      "min": 1,
+      "max": 10,
+      "minLabel": "",
+      "maxLabel": "",
+      "rows": [],
+      "cols": [],
+      "roles": {
+        "target": false,
+        "group": false,
+        "cluster": false
+      }
+    },
+    {
+      "id": "qo2k8u7",
+      "var": "introextro",
+      "type": "scale",
+      "text": "Würdest du dich eher als introvertiert oder extrovertiert beschreiben?",
+      "help": "",
+      "required": false,
+      "options": [],
+      "ordered": false,
+      "min": 1,
+      "max": 10,
+      "minLabel": "introvertiert",
+      "maxLabel": "extrovertiert",
+      "rows": [],
+      "cols": [],
+      "roles": {
+        "target": false,
+        "group": false,
+        "cluster": true
+      }
+    },
+    {
+      "id": "yab14c9",
+      "var": "known",
+      "type": "multi",
+      "text": "Welche Angebote deiner Uni zum Vernetzen kennst du?",
+      "help": "",
+      "required": false,
+      "options": [
+        "Ersti-Woche / O-Woche",
+        "Ersti-Fahrt / Kennenlern-Tag",
+        "Tutorien",
+        "Mentoring-Programm",
+        "Buddy-Programm (international)",
+        "Hochschulsport",
+        "Fachschaft / AStA",
+        "Hochschulgruppen",
+        "Kurs-Gruppenchats",
+        "Partys / Events",
+        "Lernräume / Lerncafé",
+        "Campus-App / Online-Plattform",
+        "Keine davon"
+      ],
+      "ordered": false,
+      "min": 1,
+      "max": 10,
+      "minLabel": "",
+      "maxLabel": "",
+      "rows": [],
+      "cols": [],
+      "roles": {
+        "target": false,
+        "group": false,
+        "cluster": false
+      }
+    },
+    {
+      "id": "zh89whi",
+      "var": "used",
+      "type": "multi",
+      "text": "Welche dieser Angebote hast du selbst genutzt?",
+      "help": "",
+      "required": false,
+      "options": [
+        "Ersti-Woche / O-Woche",
+        "Ersti-Fahrt / Kennenlern-Tag",
+        "Tutorien",
+        "Mentoring-Programm",
+        "Buddy-Programm (international)",
+        "Hochschulsport",
+        "Fachschaft / AStA",
+        "Hochschulgruppen",
+        "Kurs-Gruppenchats",
+        "Partys / Events",
+        "Lernräume / Lerncafé",
+        "Campus-App / Online-Plattform",
+        "Keine davon"
+      ],
+      "ordered": false,
+      "min": 1,
+      "max": 10,
+      "minLabel": "",
+      "maxLabel": "",
+      "rows": [],
+      "cols": [],
+      "roles": {
+        "target": false,
+        "group": false,
+        "cluster": true
+      }
+    },
+    {
+      "id": "erjhg6t",
+      "var": "alone",
+      "type": "single",
+      "text": "Wie oft fühlst du dich an der Uni allein oder fehl am Platz?",
+      "help": "",
+      "required": false,
+      "options": [
+        "nie",
+        "selten",
+        "manchmal",
+        "oft"
+      ],
+      "ordered": true,
+      "min": 1,
+      "max": 10,
+      "minLabel": "",
+      "maxLabel": "",
+      "rows": [],
+      "cols": [],
+      "roles": {
+        "target": false,
+        "group": false,
+        "cluster": true
+      }
+    },
+    {
+      "id": "k4da1vk",
+      "var": "alone_story",
+      "type": "long",
+      "text": "Magst du von so einem Moment erzählen?",
+      "help": "",
+      "required": false,
+      "options": [],
+      "ordered": false,
+      "min": 1,
+      "max": 10,
+      "minLabel": "",
+      "maxLabel": "",
+      "rows": [],
+      "cols": [],
+      "roles": {
+        "target": false,
+        "group": false,
+        "cluster": false
+      }
+    },
+    {
+      "id": "76e62fi",
+      "var": "barriers",
+      "type": "multi",
+      "text": "Was macht es dir schwer, Leute kennenzulernen?",
+      "help": "",
+      "required": false,
+      "options": [
+        "Lange Pendelzeit",
+        "Nebenjob",
+        "Große, anonyme Vorlesungen",
+        "Hemmung, Fremde anzusprechen",
+        "Gruppen haben sich schon gebildet",
+        "Kennenlern-Events sind meist Partys",
+        "Ich weiß nicht, wo was los ist",
+        "Gruppenchats, aber kein echter Kontakt",
+        "Sprache / neu in Deutschland",
+        "Online-Vorlesungen",
+        "Nichts davon, läuft gut"
+      ],
+      "ordered": false,
+      "min": 1,
+      "max": 10,
+      "minLabel": "",
+      "maxLabel": "",
+      "rows": [],
+      "cols": [],
+      "roles": {
+        "target": false,
+        "group": false,
+        "cluster": true
+      }
+    },
+    {
+      "id": "trajmjt",
+      "var": "quality",
+      "type": "scale",
+      "text": "Was ist dir im Studium wichtiger?",
+      "help": "",
+      "required": false,
+      "options": [],
+      "ordered": false,
+      "min": 1,
+      "max": 10,
+      "minLabel": "wenige enge Freund:innen",
+      "maxLabel": "viele Bekannte",
+      "rows": [],
+      "cols": [],
+      "roles": {
+        "target": false,
+        "group": false,
+        "cluster": false
+      }
+    },
+    {
+      "id": "8u4d6hz",
+      "var": "real_what",
+      "type": "long",
+      "text": "Was macht für dich einen echten Kontakt aus?",
+      "help": "",
+      "required": false,
+      "options": [],
+      "ordered": false,
+      "min": 1,
+      "max": 10,
+      "minLabel": "",
+      "maxLabel": "",
+      "rows": [],
+      "cols": [],
+      "roles": {
+        "target": false,
+        "group": false,
+        "cluster": false
+      }
+    },
+    {
+      "id": "brwve7y",
+      "var": "ideas",
+      "type": "matrix",
+      "text": "Würde dir das im ersten Semester helfen?",
+      "help": "",
+      "required": false,
+      "options": [],
+      "ordered": true,
+      "min": 1,
+      "max": 10,
+      "minLabel": "",
+      "maxLabel": "",
+      "rows": [
+        "Feste Lerngruppe ab Woche 1",
+        "Buddy aus einem höheren Semester",
+        "App, die nach Interessen und Stundenplan matcht",
+        "Lockere Treffen in den Pausen zwischen Vorlesungen",
+        "Kennenlernen über Aktivitäten wie Sport oder Kochen statt Partys"
+      ],
+      "cols": [
+        "eher nicht",
+        "vielleicht",
+        "auf jeden Fall"
+      ],
+      "roles": {
+        "target": false,
+        "group": false,
+        "cluster": false
+      }
+    },
+    {
+      "id": "2vu8hba",
+      "var": "ideas_why",
+      "type": "long",
+      "text": "Was müsste so ein Angebot haben, damit du es wirklich nutzt?",
+      "help": "",
+      "required": false,
+      "options": [],
+      "ordered": false,
+      "min": 1,
+      "max": 10,
+      "minLabel": "",
+      "maxLabel": "",
+      "rows": [],
+      "cols": [],
+      "roles": {
+        "target": false,
+        "group": false,
+        "cluster": false
+      }
+    },
+    {
+      "id": "q29cvof",
+      "var": "perfect",
+      "type": "long",
+      "text": "Wie sähe für dich die perfekte erste Woche an der Uni aus?",
+      "help": "",
+      "required": false,
+      "options": [],
+      "ordered": false,
+      "min": 1,
+      "max": 10,
+      "minLabel": "",
+      "maxLabel": "",
+      "rows": [],
+      "cols": [],
+      "roles": {
+        "target": false,
+        "group": false,
+        "cluster": false
+      }
+    },
+    {
+      "id": "ytgv3mu",
+      "var": "more",
+      "type": "long",
+      "text": "Gibt es noch etwas, das dir wichtig ist?",
+      "help": "",
+      "required": false,
+      "options": [],
+      "ordered": false,
+      "min": 1,
+      "max": 10,
+      "minLabel": "",
+      "maxLabel": "",
+      "rows": [],
+      "cols": [],
+      "roles": {
+        "target": false,
+        "group": false,
+        "cluster": false
+      }
+    },
+    {
+      "id": "85cxi5z",
+      "var": "team",
+      "type": "short",
+      "text": "Eingetragen vom Team (Name)",
+      "help": "nur für das Projektteam",
+      "required": false,
+      "options": [],
+      "ordered": false,
+      "min": 1,
+      "max": 10,
+      "minLabel": "",
+      "maxLabel": "",
+      "rows": [],
+      "cols": [],
+      "roles": {
+        "target": false,
+        "group": false,
+        "cluster": false
+      }
+    }
+  ],
+  "hypotheses": [
+    {
+      "id": "gygwvtp",
+      "kind": "share",
+      "text": "Nach der Ersti-Woche wird der Anschluss schwer",
+      "q": "barriers",
+      "option": "Gruppen haben sich schon gebildet",
+      "threshold": 0.25
+    },
+    {
+      "id": "inxqqsr",
+      "kind": "share",
+      "text": "Große Vorlesungen wirken anonym",
+      "q": "barriers",
+      "option": "Große, anonyme Vorlesungen",
+      "threshold": 0.25
+    },
+    {
+      "id": "prod2iu",
+      "kind": "share",
+      "text": "Gruppenchats ersetzen keinen echten Kontakt",
+      "q": "barriers",
+      "option": "Gruppenchats, aber kein echter Kontakt",
+      "threshold": 0.25
+    },
+    {
+      "id": "ty5m5h2",
+      "kind": "share",
+      "text": "Pendeln verhindert Kontakte",
+      "q": "barriers",
+      "option": "Lange Pendelzeit",
+      "threshold": 0.25
+    },
+    {
+      "id": "2ebzvvj",
+      "kind": "share",
+      "text": "Hemmungen, Fremde anzusprechen",
+      "q": "barriers",
+      "option": "Hemmung, Fremde anzusprechen",
+      "threshold": 0.25
+    },
+    {
+      "id": "782urac",
+      "kind": "corr",
+      "text": "Wer sich öfter allein fühlt, fühlt sich weniger zugehörig",
+      "a": "alone",
+      "b": "belong",
+      "dir": "neg"
+    },
+    {
+      "id": "4rte5gt",
+      "kind": "corr",
+      "text": "Extrovertierte fühlen sich zugehöriger",
+      "a": "introextro",
+      "b": "belong",
+      "dir": "pos"
+    }
+  ],
+  "protos": [
+    {
+      "id": "kbwxrgb",
+      "name": "Paris",
+      "text": "20, BWL, extrovertiert, pendelt über eine Stunde, viele Party-Bekanntschaften, kaum enge Freundschaften. Pains: verpasst spontane Treffen, oberflächliche Kontakte. Gains: wenige enge Freundschaften, Kontakte tagsüber."
+    },
+    {
+      "id": "2enveip",
+      "name": "Hilton",
+      "text": "19, introvertiert, sportlich, wohnt in der Nähe, kaum Kontakte, sitzt allein. Pains: Kennenlernformate sind Partys, Hemmung Fremde anzusprechen, Gruppen haben sich schon gebildet. Gains: feste Lerngruppe, Kontakte über Interessen."
+    }
+  ],
+  "settings": {
+    "testVar": "team",
+    "testVal": "TEST",
+    "target": "belong"
+  },
+  "data": {
+    "rows": [],
+    "excluded": [],
+    "mapping": [],
+    "fileName": "",
+    "importedAt": null
+  },
+  "ai": {}
+}

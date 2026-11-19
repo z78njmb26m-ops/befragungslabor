@@ -1,0 +1,136 @@
+<body>
+<header class="app">
+  <div class="in">
+    <div class="brand">Befragungslabor<small>offen · lokal · kostenlos</small></div>
+    <nav class="steps" aria-label="Arbeitsschritte">
+      <button type="button" data-view="project"><span class="n">1</span>Projekt</button>
+      <button type="button" data-view="builder"><span class="n">2</span>Fragebogen</button>
+      <button type="button" data-view="data"><span class="n">3</span>Daten</button>
+      <button type="button" data-view="report"><span class="n">4</span>Auswertung</button>
+      <button type="button" data-view="help"><span class="n">?</span>Methoden</button>
+    </nav>
+    <span class="saveinfo" id="saveInfo" role="status"></span>
+  </div>
+</header>
+
+<main>
+  <!-- 1 Projekt -->
+  <section class="view" id="v-project">
+    <h2 class="vt">Projekt</h2>
+    <p class="lead">Lege fest, was du herausfinden willst. Alles wird nur in diesem Browser gespeichert. Mit „Projekt speichern“ bekommst du eine Datei, die du weitergeben oder später wieder laden kannst.</p>
+    <div class="panel">
+      <div class="row">
+        <button class="btn primary" type="button" id="newBlank">Leeres Projekt</button>
+        <button class="btn" type="button" id="newTemplate">Vorlage laden: Zugehörigkeit im ersten Semester</button>
+        <button class="btn" type="button" id="saveFile">Projekt speichern (.json)</button>
+        <label class="btn" for="loadFile" style="cursor:pointer">Projekt laden</label>
+        <input type="file" id="loadFile" accept=".json" class="hidden">
+      </div>
+      <p class="hint" id="projHint" style="margin:8px 0 0"></p>
+    </div>
+    <div class="panel">
+      <h3>Grunddaten</h3>
+      <div class="grid2">
+        <label class="f">Titel der Studie<input id="p_title" data-p="title" placeholder="z. B. Zugehörigkeit im ersten Semester"></label>
+        <label class="f">Autor:innen / Gruppe<input id="p_author" data-p="author" placeholder="z. B. Projektgruppe Question Zero"></label>
+        <label class="f">Kurs / Kontext<input id="p_course" data-p="course" placeholder="z. B. Marketing II, Design Thinking"></label>
+        <label class="f">Zielgruppe<input id="p_audience" data-p="audience" placeholder="z. B. Studierende im ersten Semester"></label>
+      </div>
+      <label class="f" style="margin-top:12px">Forschungsfrage (z. B. Question Zero oder How-Might-We-Frage)<textarea id="p_rq" data-p="rq" placeholder="Wie könnten wir …"></textarea></label>
+    </div>
+    <div class="panel">
+      <h3>Hypothesen</h3>
+      <p class="hint" style="margin-top:-4px">Annahmen, die die Daten prüfen sollen, etwa aus Context Map oder Empathy Map. Erst Fragen im Fragebogen anlegen, dann hier verknüpfen.</p>
+      <div id="hypList"></div>
+      <div class="row" style="margin-top:8px"><button class="btn" type="button" id="addHypShare">+ Anteils-Hypothese</button><button class="btn" type="button" id="addHypCorr">+ Zusammenhangs-Hypothese</button></div>
+    </div>
+    <div class="panel">
+      <h3>Proto-Personas (optional)</h3>
+      <p class="hint" style="margin-top:-4px">Personas, die ihr vor der Befragung angenommen habt. Die KI-Auswertung gleicht sie später mit den echten Daten ab.</p>
+      <div id="protoList"></div>
+      <button class="btn" type="button" id="addProto" style="margin-top:8px">+ Proto-Persona</button>
+    </div>
+  </section>
+
+  <!-- 2 Fragebogen -->
+  <section class="view" id="v-builder">
+    <h2 class="vt">Fragebogen</h2>
+    <p class="lead">Baue den Fragebogen aus Bausteinen. Lege fest, welche Frage die Zielvariable ist, nach welchen Merkmalen Gruppen verglichen und welche für die Typenbildung genutzt werden. Danach exportierst du den Fragebogen in dein Formular-Tool.</p>
+    <div class="builder">
+      <div id="qList"></div>
+      <aside class="side">
+        <div class="panel">
+          <h3>Frage hinzufügen</h3>
+          <div class="addq">
+            <button class="btn" type="button" data-add="single">Einfachauswahl</button>
+            <button class="btn" type="button" data-add="multi">Mehrfachauswahl</button>
+            <button class="btn" type="button" data-add="scale">Skala</button>
+            <button class="btn" type="button" data-add="matrix">Matrix / Likert</button>
+            <button class="btn" type="button" data-add="short">Kurztext</button>
+            <button class="btn" type="button" data-add="long">Freitext</button>
+            <button class="btn" type="button" data-add="consent">Einverständnis</button>
+          </div>
+        </div>
+        <div class="panel">
+          <h3>Qualitäts-Check</h3>
+          <ul class="checklist" id="qCheck"></ul>
+        </div>
+        <div class="panel">
+          <h3>Export</h3>
+          <div class="row" style="flex-direction:column;align-items:stretch">
+            <button class="btn" type="button" data-export="text">Als Text für jedes Formular-Tool</button>
+            <button class="btn" type="button" data-export="gas">Google Forms automatisch erstellen</button>
+            <button class="btn" type="button" data-export="jotform">Prompt für den Jotform-KI-Baukasten</button>
+            <button class="btn" type="button" data-export="msforms">Anleitung Microsoft Forms</button>
+          </div>
+        </div>
+      </aside>
+    </div>
+    <div class="panel hidden" id="exportPanel">
+      <div class="row" style="justify-content:space-between"><h3 id="exportTitle">Export</h3><div class="row"><button class="btn" type="button" id="copyExport">Kopieren</button><button class="btn" type="button" id="closeExport">Schließen</button></div></div>
+      <div id="exportHelp" class="hint"></div>
+      <pre class="code" id="exportCode"></pre>
+    </div>
+  </section>
+
+  <!-- 3 Daten -->
+  <section class="view" id="v-data">
+    <h2 class="vt">Daten</h2>
+    <p class="lead">Lade den Export deines Formular-Tools (Excel oder CSV). Das Labor ordnet die Spalten automatisch den Fragen zu. Prüfe die Zuordnung und korrigiere sie bei Bedarf. Bei einem erneuten Import werden bereits vorhandene Antworten nicht doppelt gezählt.</p>
+    <div class="panel">
+      <div class="row">
+        <label class="btn primary" for="dataFile" style="cursor:pointer">Export laden (.xlsx, .csv)</label>
+        <input type="file" id="dataFile" accept=".xlsx,.xls,.csv,.tsv,.txt" class="hidden">
+        <button class="btn danger" type="button" id="clearData">Alle Daten entfernen</button>
+        <span class="hint" id="dataInfo"></span>
+      </div>
+      <div class="grid2" style="margin-top:12px">
+        <label class="f">Testeinträge ausschließen: Frage<select id="testVar"></select></label>
+        <label class="f">… wenn die Antwort lautet<input id="testVal" placeholder="z. B. TEST"></label>
+      </div>
+    </div>
+    <div class="panel" id="mapPanel"><h3>Zuordnung der Spalten</h3><div id="mapOut"><p class="empty">Noch keine Datei geladen.</p></div></div>
+    <div class="panel"><h3>Rohdaten</h3><p class="hint">Einzelne Fälle lassen sich über das Kästchen ausschließen, z. B. unvollständige oder doppelte Antworten.</p><div id="rawOut" class="tbl"></div></div>
+  </section>
+
+  <!-- 4 Auswertung -->
+  <section class="view" id="v-report">
+    <div class="report">
+      <aside>
+        <nav aria-label="Inhalt" id="toc"></nav>
+        <div class="noprint" style="margin-top:16px;display:flex;flex-direction:column;gap:6px">
+          <label class="f">Zielvariable<select id="targetSel"></select></label>
+          <button class="btn" type="button" id="printBtn">Drucken / als PDF</button>
+          <button class="btn" type="button" id="copyReport">Ergebnisteil kopieren</button>
+          <span class="hint" id="reportStatus"></span>
+        </div>
+      </aside>
+      <article class="paper" id="paper"></article>
+    </div>
+  </section>
+
+  <!-- Methoden -->
+  <section class="view help" id="v-help"></section>
+</main>
+<div class="tip" id="tip" role="tooltip"></div>
+<a id="dl" class="hidden"></a>
